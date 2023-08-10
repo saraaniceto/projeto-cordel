@@ -1,4 +1,14 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root{
+    --font-heading: 'Paytone One', sans-serif;
+    --font-text: 'Jost', sans-serif;
+    --font-text2: 'Preahvihear', sans-serif;
+    --color1: #F8AFB6
+}
 
 *{
     margin: 0px;
@@ -7,26 +17,39 @@
 
 html,body {
     min-height: 100vh;
-    background-color: darkgrey;
+    background-color: var(--color1);
+    font-family: var(--font-text);    
 }
 
 header{
-    background-color: black;
-    color: white;
+    background-color: var(--color1);
+    color: black;
     text-align: center;
+    border: 8px double black;
+    margin: 30px;
 }
 
 header > h1{
-    padding: 50px;
+    padding-top: 35px;
     font-variant: small-caps;
+    font-family: var(--font-heading);
+    font-size: 9vw;
+}
+
+header > h2{
+    padding-bottom: 35px;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    font-size: 3vw;
 }
 
 header > p {
-    padding-bottom: 50px;
+    padding-bottom: 35px;
+    font-size: 3vw;
 }
 
 a{
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: bolder;
 }
@@ -35,32 +58,59 @@ header a:hover, footer a:hover{
     text-decoration: underline;
 }
 
-footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
 
 section{
     padding-top: 10vh;
     padding-bottom: 10vh;
     padding-left: 30px;
     line-height: 2em;
+    font-family: var(--font-text2);
+    font-size: 3vw;
+}
+
+section > p{
+    padding-bottom: 2em;
 }
 
 section.normal{
-    background-color: white;
+    background-color: var(--color1);
     color: black;
+}
 
+section.normal > p{
+    padding-left: 20px;
 }
 
 section.imagem{
-    background-color: rgb(51, 51, 51);
-    color: white;
+    background-color: var(--color1);
+    color: black;
 }
 
 section.imagem > p{
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.253);
+    display: inline-block;
+    padding: 20px;
+    border: 3px solid black;
+    outline: 5px solid var(--color1);
+    background-color: var(--color1);
+}
+
+section#img01{
+    background-image: url(../imagens/xilogravura1.png);
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+section#img02{
+    background-image: url(../imagens/letter.jpg);
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+footer{
+    background-color: var(--color1);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid black;
+    margin: 30px;
 }
